@@ -27,4 +27,11 @@ sudo apt install v4l2loopback-dkms v4l2loopback-utils
 ## Stream desctop to video2
 sudo modprobe v4l2loopback
 
-ffmpeg -f x11grab -r 15 -s 1024x768 -i :0.0+0,0 -vcodec rawvideo -pix_fmt yuyv422 -threads 0 -f v4l2 /dev/video2
+ffmpeg -f x11grab -r 15 -s 1280x720 -i :0.0+0,0 -vcodec rawvideo -pix_fmt yuyv422 -threads 0 -f v4l2 /dev/video2
+
+## 1280x720 resolution over vnc
+
+comment out:
+v4c-fkms.v3d
+in /boot/config.txt
+
