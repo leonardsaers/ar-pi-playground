@@ -20,3 +20,6 @@ ffmpeg -loop 1 -re -i Early_flight.jpg -f v4l2 -vcodec rawvideo -pix_fmt yuyv422
 
 ## Connect video device as output USB camera
 ~/uvc-gadget/uvc-gadget -v /dev/video2 -u /dev/video1 -r 1 -f 0
+
+## Install v4l2loopback
+sudo apt install v4l2loopback-dkms v4l2loopback-utils
